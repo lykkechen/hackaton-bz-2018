@@ -1,19 +1,14 @@
 <template>
-  <nuxt-link
-    :to="to"
+  <button
     class="button"
     @click="onClick">
     {{ action }}
-  </nuxt-link>
+  </button>
 </template>
 
 <script>
 export default {
   props: {
-    to: {
-      type: String,
-      default: ''
-    },
     action: {
       type: String,
       default: ''
@@ -21,7 +16,7 @@ export default {
   },
   methods: {
     onClick ($event) {
-      this.$emit("click", $event);
+      this.$emit('click', $event)
     }
   }
 }

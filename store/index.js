@@ -5,19 +5,21 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       driver: {},
-      passengers: [
-        {
-          name: 'Mario',
-          surname: 'Rossi'
-        }
-      ]
+      passengers: [],
+      pendingPassenger: {
+        name: 'Mario',
+        surname: 'Rossi'
+      }
     },
     mutations: {
       CREATE_DRIVER_ITINERARY (state, driver) {
         state.driver = driver
       },
-      CREATE_PASSENGER_REQUEST (state, passenger) {
+      APPROVE_PASSENGER (state, passenger) {
         state.passengers.push(passenger)
+      },
+      REJECT_PASSENGER (state, pendingPassenger) {
+        state.pendingPassenger = {}
       }
     },
     actions: {
@@ -28,6 +30,9 @@ const createStore = () => {
       },
       passengers (state) {
         return state.passengers
+      },
+      pendingPassenger (state) {
+        return state.pendingPassenger
       }
     }
   })

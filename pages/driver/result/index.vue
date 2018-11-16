@@ -11,13 +11,32 @@
             <p>Posti {{ driver.places }}</p>
           </div>
           <div
+            v-if="passengers.length > 0"
+            class="content">
+            <h2>Passeggeri</h2>
+            <div
+              v-for="passenger in passengers"
+              :key="passenger.name">
+              <p>Nome: {{ passenger.name }}</p>
+              <p>Cognome: {{ passenger.surname }}</p>
+            </div>
+          </div>
+          <div
             v-if="isPassangerNotificationVisible"
             class="notification">
             <button class="delete"/>
-            <div class="content">
+            <div
+              class="content">
               <h2>Nuova richiesta</h2>
-              <p>Nome: {{ passenger.name }}</p>
-              <p>Cognome: {{ passenger.surname }}</p>
+              <p>Nome: {{ pendingPassenger.name }}</p>
+              <p>Cognome: {{ pendingPassenger.surname }}</p>
+              <base-button
+                action="Rifiuta"
+                @click="rejectPassanger"/>
+              <base-button
+                action="Accetta"
+                @click="approvePassenger"/>
+
             </div>
           </div>
         </div>
@@ -27,7 +46,11 @@
 </template>
 
 <script>
+import BaseButton from '@/components/BaseButton.vue'
 export default {
+  components: {
+    BaseButton
+  },
   data () {
     return {
       isPassangerNotificationVisible: false
@@ -37,15 +60,27 @@ export default {
     driver () {
       return this.$store.getters['driver']
     },
-    passenger () {
-      const pass = this.$store.getters['passengers']
-      return pass[0]
+    pendingPassenger () {
+      return this.$store.getters['pendingPassenger']
+    },
+    passengers () {
+      return this.$store.getters['passengers']
     }
   },
   created () {
     setTimeout(() => {
       this.isPassangerNotificationVisible = true
     }, 2000)
+  },
+  methods: {
+    approvePassenger () {
+      this.$store.commit('APPROVE_PASSENGER', this.pendingPassenger)
+      this.isPassangerNotificationVisible = false
+    },
+    rejectPassanger () {
+      this.$store.commit('REJECT_PASSENGER')
+      this.isPassangerNotificationVisible = false
+    }
   }
 }
 </script>

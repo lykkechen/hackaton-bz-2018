@@ -18,7 +18,7 @@
         label="Partenza alle ore"
         type="text"/>
       <nuxt-link
-        to="/driver/result">
+        to="/driver/summary">
         <base-button
           action="Let's go"
           @click="createDriverItinerary"/>

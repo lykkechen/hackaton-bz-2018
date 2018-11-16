@@ -13,10 +13,14 @@
         v-model="to"
         label="Arrivo a"
         type="text"/>
+      <base-input
+        v-model="time"
+        label="Partenza alle ore"
+        type="text"/>
       <nuxt-link
-        to="driver/result">
+        to="/driver/result">
         <base-button
-          :action="buttonLabel"
+          action="Let's go"
           to="driver/result"
           @click="createDriverItinerary"/>
       </nuxt-link>
@@ -38,17 +42,16 @@ export default {
       places: "",
       from: "",
       to: "",
-      toLabel: "Arrivo",
-      buttonLabel: "Let's go"
+      time: ""
     }
   },
   methods: {
     createDriverItinerary () {
-      debugger
       this.$store.commit('CREATE_DRIVER_ITINERARY', {
-        place: this.places,
+        places: this.places,
         from: this.from,
-        to: this.to
+        to: this.to,
+        time: this.time
       })
     }
   }

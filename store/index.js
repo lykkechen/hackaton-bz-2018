@@ -8,7 +8,6 @@ const createStore = () => {
     },
     mutations: {
       CREATE_DRIVER_ITINERARY (state, driver) {
-        debugger
         state.driver = driver
       }
     },

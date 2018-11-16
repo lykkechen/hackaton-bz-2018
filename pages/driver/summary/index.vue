@@ -36,8 +36,12 @@
               <base-button
                 action="Accetta"
                 @click="approvePassenger"/>
-
             </div>
+          </div>
+          <div>
+            <base-button
+              action="Partenza"
+              @click="$router.push('/driver/travelling')"/>
           </div>
         </div>
       </div>

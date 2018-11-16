@@ -1,8 +1,8 @@
 <template>
   <nuxt-link
-    @click="onClick"
     :to="to"
-    class="button">
+    class="button"
+    @click="onClick">
     {{ action }}
   </nuxt-link>
 </template>

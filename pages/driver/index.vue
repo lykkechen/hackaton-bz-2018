@@ -21,7 +21,6 @@
         to="/driver/result">
         <base-button
           action="Let's go"
-          to="driver/result"
           @click="createDriverItinerary"/>
       </nuxt-link>
     </div>

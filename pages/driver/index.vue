@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import BaseInput from '@/components/Input.vue'
+import BaseInput from '@/components/BaseInput.vue'
 export default {
   components: {
     BaseInput

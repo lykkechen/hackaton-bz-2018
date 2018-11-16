@@ -6,9 +6,10 @@
       {{ label }}
     </label>
     <input
+      :value="value"
+      :placeholder="placeholder"
       class="input"
       type="text"
-      :placeholder="placeholder"
       @input="onInput">
   </div>
 </template>
@@ -20,14 +21,18 @@ export default {
       type: String,
       default: ''
     },
+    value: {
+      type: String,
+      default: ''
+    },
     label: {
       type: String,
-      dafault: null
+      default: ''
     }
   },
   methods: {
-    onInput() {
-      $emit('input', $event.target.value)
+    onInput ($event) {
+      this.$emit('input', $event.target.value)
     }
   }
 }

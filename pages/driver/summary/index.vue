@@ -74,7 +74,7 @@ export default {
   created () {
     setTimeout(() => {
       this.isPassangerNotificationVisible = true
-    }, 2000)
+    }, 500)
   },
   methods: {
     approvePassenger () {

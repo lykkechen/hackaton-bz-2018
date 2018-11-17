@@ -3,7 +3,7 @@
     <div
       v-for="passenger in passengers"
       :key="passenger.name">
-      Passeggero: {{ passenger.name }} {{ passenger.surname }}
+      Passenger: {{ passenger.name }} {{ passenger.surname }}
       <base-button
         action="È arrivato"
         @click="checkoutPassenger(passenger)"/>

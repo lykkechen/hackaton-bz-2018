@@ -25,3 +25,7 @@ $ yarn run generate
 ```
 
 For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+
+## License
+
+* Used photos under public domain license from [Pexel](https://www.pexels.com)

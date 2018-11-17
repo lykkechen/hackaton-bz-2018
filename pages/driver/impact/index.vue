@@ -17,6 +17,10 @@
               <p>10%</p>
             </div>
           </base-card>
+          <nuxt-link to="/">
+            <base-button
+              action="Go to home"/>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -25,9 +29,11 @@
 
 <script>
 import BaseCard from '@/components/BaseCard'
+import BaseButton from '@/components/BaseButton'
 export default {
   components: {
-    BaseCard
+    BaseCard,
+    BaseButton
   }
 }
 </script>

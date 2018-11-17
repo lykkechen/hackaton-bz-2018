@@ -7,7 +7,7 @@
       <div class="columns is-multiline">
         <div
           v-for="code in codes"
-          :key="code"
+          :key="code.number"
           class="column is-half">
           <base-card>
             <div class="content">

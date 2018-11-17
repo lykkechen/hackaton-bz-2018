@@ -27,7 +27,7 @@
         type="text"/>
       <base-input
         v-model="time"
-        label="Leaving at"
+        label="Leaving time"
         type="text"/>
       <br>
       <nuxt-link

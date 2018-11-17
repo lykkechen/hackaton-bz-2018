@@ -1,6 +1,6 @@
 <template>
-  <div class="card">
-    <div class="card-content">
+  <section class="section">
+    <div class="container">
       <base-input
         v-model="from"
         label="Partenza da"
@@ -20,7 +20,7 @@
           @click="createDriverItinerary"/>
       </nuxt-link>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

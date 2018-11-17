@@ -1,22 +1,45 @@
 <template>
-  <div>
-    <div
-      v-for="passenger in passengers"
-      :key="passenger.name">
-      Passenger: {{ passenger.name }} {{ passenger.surname }}
-      <base-button
-        action="È arrivato"
-        @click="checkoutPassenger(passenger)"/>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-10">
+          <base-card>
+            <div
+              v-for="passenger in passengers"
+              :key="passenger.name">
+              <div class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <div class="content">
+                      <h4>Passenger: {{ passenger.name }} {{ passenger.surname }}</h4>
+                    </div>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <div class="level-item">
+                    <base-button
+                      action="Has arrived!"
+                      @click="checkoutPassenger(passenger)"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </base-card>
+          <br>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 
 <script>
-import BaseButton from '@/components/BaseButton.vue'
+import BaseButton from '@/components/BaseButton'
+import BaseCard from '@/components/BaseCard'
 export default {
   components: {
-    BaseButton
+    BaseButton,
+    BaseCard
   },
   data () {
     return {

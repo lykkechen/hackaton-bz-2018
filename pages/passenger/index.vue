@@ -13,6 +13,7 @@
         v-model="time"
         label="Partenza alle ore"
         type="text"/>
+      <br>
       <nuxt-link
         to="/passenger/rides">
         <base-button

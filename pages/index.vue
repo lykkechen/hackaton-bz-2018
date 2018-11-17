@@ -42,15 +42,17 @@
         </div>
         <div
           v-if="isThereAPassenger"
-          class="columns">
-          <div class="column">
-            <div class="content">
-              You are travelling from {{ passenger.from }} to {{ passenger.to }} now 🚗
-            </div>
-            <nuxt-link to="/passenger/scan">
-              <base-button
-                action="I'm arrived 🎉"/>
-            </nuxt-link>
+          class="columns is-centered">
+          <div class="column is-half">
+            <base-card>
+              <div class="content">
+                You are travelling from {{ passenger.from }} to {{ passenger.to }} now 🚗
+              </div>
+              <nuxt-link to="/passenger/scan">
+                <base-button
+                  action="I'm arrived 🎉"/>
+              </nuxt-link>
+            </base-card>
           </div>
         </div>
       </div>

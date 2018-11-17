@@ -3,15 +3,15 @@
     <div class="container">
       <base-input
         v-model="from"
-        label="Partenza da"
+        label="Leaving from"
         type="text"/>
       <base-input
         v-model="to"
-        label="Arrivo a"
+        label="Arriving in"
         type="text"/>
       <base-input
         v-model="time"
-        label="Partenza alle ore"
+        label="Leaving time"
         type="text"/>
       <br>
       <nuxt-link

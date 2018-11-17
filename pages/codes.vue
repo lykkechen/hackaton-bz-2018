@@ -34,11 +34,6 @@ export default {
     codes () {
       return this.$store.getters['codes']
     }
-  },
-  methods: {
-    reedemCode () {
-      this.$store.commit('REDEEM_CODE')
-    }
   }
 }
 </script>

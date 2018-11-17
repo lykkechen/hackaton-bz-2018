@@ -78,6 +78,9 @@ export default {
         this.$router.push('/driver/travelling')
       } else {
         this.$router.push('/driver/impact')
+        this.$store.commit('ADD_DISCOUNT_CODE', {
+          number: '757843265876239',
+        })
       }
     }
   }

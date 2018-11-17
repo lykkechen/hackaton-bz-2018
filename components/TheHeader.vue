@@ -3,6 +3,13 @@
     <div
       class="navbar-brand"
       style="padding: 1rem;">
+      <div class="navbar-item">
+        <div
+          class="content"
+          style="margin: 1rem;">
+          <img src="/images/PollMe-Logo.png">
+        </div>
+      </div>
       <nuxt-link
         to="/">
         <profile-icon

@@ -4,15 +4,19 @@
       <div
         v-if="hasRides"
         class="content">
-        <h2>Rides</h2>
+        <h1>Rides</h1>
         <div
           v-for="ride in rides"
           :key="ride.name">
-          <p>Nome: {{ ride.name }}</p>
-          <p>Cognome: {{ ride.surname }}</p>
-          <base-button
-            action="Scegli"
-            @click="chooseDriver(ride)"/>
+          <base-card>
+            <h3>Autista</h3>
+            <p>{{ ride.name }}</p>
+            <p>{{ ride.surname }}</p>
+            <base-button
+              action="Scegli"
+              @click="chooseDriver(ride)"/>
+          </base-card>
+          <br>
         </div>
       </div>
       <div/>
@@ -22,9 +26,12 @@
 
 <script>
 import BaseButton from '@/components/BaseButton.vue'
+import BaseCard from '@/components/BaseCard.vue'
+
 export default {
   components: {
-    BaseButton
+    BaseButton,
+    BaseCard
   },
   data () {
     return {

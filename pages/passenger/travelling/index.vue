@@ -1,25 +1,46 @@
 <template>
   <section class="section">
     <div class="container">
-      <div
-        class="content">
-        <h2>Driver</h2>
-
-        <p>Nome: {{ driver.name }}</p>
-        <p>Cognome: {{ driver.surname }}</p>
-        <h2>Ride</h2>
-
-        <p>From {{ passenger.from }}</p>
-        <p>To: {{ passenger.to }}</p>
-        <p>Time: {{ passenger.time }}</p>
-
-        <h2>Other passengers</h2>
-        <profile-icon
-          image="/images/random-guy-2.jpeg"/>
-        <base-button
-          action="Add me"
-          @click="checkout()"/>
-      </div>
+      <base-card>
+        <div
+          class="content">
+          <h2>Your driver will be {{ driver.name }} {{ driver.surname }}</h2>
+          <h2>Ride</h2>
+          <div class="columns">
+            <div class="column is-one-third">
+              <h3>From:</h3>
+              <p>{{ passenger.from }}</p>
+            </div>
+            <div class="column is-one-third">
+              <h3>To:</h3>
+              <p>{{ passenger.to }}</p>
+            </div>
+            <div class="column is-one-third">
+              <h3>Time:</h3>
+              <p>{{ passenger.time }}</p>
+            </div>
+          </div>
+          <hr>
+          <h2>You'll be in the car with these fine people</h2>
+          <div class="columns is-centered">
+            <div class="column">
+              <profile-icon
+                image="https://cdn.dribbble.com/users/1079878/avatars/normal/fdced349f4efa5f0226dcfab71243d6b.png?1520775907"/>
+            </div>
+            <div class="column">
+              <profile-icon
+                image="https://cdn.dribbble.com/users/1079878/avatars/normal/fdced349f4efa5f0226dcfab71243d6b.png?1520775907"/>
+            </div>
+            <div class="column">
+              <profile-icon
+                image="https://cdn.dribbble.com/users/1079878/avatars/normal/fdced349f4efa5f0226dcfab71243d6b.png?1520775907"/>
+            </div>
+          </div>
+          <base-button
+            action="Add me"
+            @click="checkout()"/>
+        </div>
+      </base-card>
       <div/>
     </div>
   </section>
@@ -28,10 +49,13 @@
 <script>
 import BaseButton from '@/components/BaseButton.vue'
 import ProfileIcon from '@/components/ProfileIcon'
+import BaseCard from '@/components/BaseCard'
+
 export default {
   components: {
     BaseButton,
-    ProfileIcon
+    ProfileIcon,
+    BaseCard
   },
   computed: {
     driver () {
@@ -58,3 +82,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+hr {
+    width: 50px;
+    border: 2px solid black;
+  }
+</style>
+

@@ -1,47 +1,39 @@
 <template>
   <div>
-    <section class="section">
+    <section
+      class="section"
+      style="padding-top: 0;">
       <div class="container">
-        <div class="columns">
+        <div class="columns is-centered">
           <div class="column is-one-third">
-            <div class="box">
-              <div class="content">
-                <div class="level is-mobile">
-                  <div class="level-left">
-                    <div class="level-item">
-                      <div class="circle">{{ numberCoupon }}</div>
-                    </div>
-                    <div class="level-item">
-                      Coupons
-                    </div>
-                  </div>
-                  <div
-                    class="level-item"
-                    style="font-size: 1rem;">
-                    &rarr;
-                  </div>
-                </div>
-              </div>
+            <coupon-badge/>
+          </div>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-half has-text-centered">
+            <div class="content">
+              <h3>Hey there, welcome! Are you ready for a new ride?</h3>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="container">
-        <div class="columns is-multiline">
-          <div class="column is-full">
+        <div class="columns">
+          <div class="column">
+            <hr>
+          </div>
+        </div>
+        <div class="columns is-multiline is-centered">
+          <div class="column is-half has-text-right-desktop has-text-centered-mobile">
             <nuxt-link
               to="/driver">
-              <base-button
-                action="Driver"/>
+              <driver-button
+                action="I offer a ride"/>
             </nuxt-link>
           </div>
-          <div class="column is-full">
+          <div class="column is-half has-text-left-desktop has-text-centered-mobile">
             <nuxt-link
               to="/passenger">
-              <base-button
-                action="Passenger"/>
+              <passenger-button
+                action="I am looking for one"/>
             </nuxt-link>
           </div>
         </div>
@@ -51,10 +43,16 @@
 </template>
 
 <script>
-import BaseButton from '@/components/BaseButton'
+import DriverButton from '@/components/DriverButton'
+import PassengerButton from '@/components/PassengerButton'
+import CouponBadge from '@/components/CouponBadge'
+
+
 export default {
   components: {
-    BaseButton
+    DriverButton,
+    PassengerButton,
+    CouponBadge
   },
   data() {
     return {
@@ -75,6 +73,20 @@ export default {
     line-height: 2rem;
     text-align: center;
     background: #000
+  }
+
+  .has-background-image {
+    background-image: url("/images/index-bg.svg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  hr {
+    width: 50px;
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
   }
 </style>
 

@@ -8,7 +8,7 @@
     <input
       :value="value"
       :placeholder="placeholder"
-      class="input"
+      class="input is-shadowless"
       type="text"
       @input="onInput">
   </div>
@@ -37,4 +37,20 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.input {
+  background-color: white;
+  border-bottom: 2px solid black !important;
+  box-shadow: 0;
+  border-color: white;
+  border-radius: 0;
+  height: 50px;
+  &:focus {
+    background-color: white;
+    border: 2px solid black !important;
+  }
+}
+</style>
+
 

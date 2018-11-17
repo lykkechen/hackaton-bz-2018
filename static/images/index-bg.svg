@@ -1,0 +1,25 @@
+<svg width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<rect width="1440" height="1024" fill="white"/>
+<ellipse cx="334.5" cy="850" rx="138.5" ry="139" fill="#20AF48"/>
+<circle opacity="0.2" cx="334" cy="850" r="272" fill="#C1FFA4"/>
+<circle opacity="0.2" cx="334" cy="850" r="409" fill="#C1FFA4"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="238" y="683" width="557" height="482">
+<path d="M516.485 683.723L794.217 1164.77H238.753L516.485 683.723Z" fill="#C4C4C4"/>
+</mask>
+<g mask="url(#mask0)">
+<path d="M516.485 683.723L516.485 1164.77H794.217L516.485 683.723Z" fill="#20AF48"/>
+<path d="M516.485 683.723L516.485 1164.77H238.753L516.485 683.723Z" fill="#C1FFA4"/>
+</g>
+<rect x="-7" y="896" width="430" height="400" fill="#FFE7A8"/>
+<rect x="-7" y="896" width="302" height="165" fill="#FFCE50"/>
+<path d="M426.165 938.26L260 1077H1486V765L1293.82 894.179C1231.97 935.754 1151.71 938.003 1087.63 899.959L1041.81 872.758C988.514 841.118 923.266 836.998 866.415 861.684L750.041 912.215C705.193 931.688 654.267 931.634 609.46 912.065C548.333 885.367 477.367 895.509 426.165 938.26Z" fill="#FFE7A8" fill-opacity="0.53"/>
+<rect x="985" y="651" width="157" height="471" fill="#C1FFA4"/>
+<rect x="1142" y="651" width="158" height="471" fill="#20AF48"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="1440" height="1024" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -4,9 +4,14 @@
       class="section"
       style="padding-top: 0;">
       <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-one-third">
-            <coupon-badge/>
+        <div
+          v-if="hasCoupons"
+          class="columns is-centered">
+          <div
+            v-for="coupon in coupons"
+            :key="coupon.number"
+            class="column is-one-third">
+            <coupon-badge :coupon="coupon"/>
           </div>
         </div>
         <div class="columns is-centered">
@@ -69,14 +74,15 @@ export default {
     CouponBadge,
     BaseButton
   },
-  data () {
-    return {
-      numberCoupon: 1
-    }
-  },
   computed: {
     passenger () {
       return this.$store.getters['passenger']
+    },
+    coupons () {
+      return this.$store.getters['coupons']
+    },
+    hasCoupons () {
+      return this.numberCoupon !== 0
     },
     isThereAPassenger () {
       if (this.passenger && this.passenger.from) {

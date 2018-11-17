@@ -24,7 +24,12 @@ const createStore = () => {
           places: '2'
         }
       ],
-      passenger: {}
+      passenger: {},
+      coupons: [
+        {
+          number: '4754832658346'
+        }
+      ]
     },
     mutations: {
       CREATE_DRIVER_ITINERARY (state, driver) {
@@ -64,6 +69,9 @@ const createStore = () => {
           }
         ]
       },
+      ADD_COUPON (state, coupon) {
+        state.coupons.push(coupon)
+      }
     },
     actions: {
     },
@@ -77,8 +85,8 @@ const createStore = () => {
       pendingPassenger (state) {
         return state.pendingPassenger
       },
-      coupon (state) {
-        return state.coupon
+      coupons (state) {
+        return state.coupons
       },
       rides (state) {
         return state.rides

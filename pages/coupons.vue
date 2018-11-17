@@ -4,12 +4,12 @@
       <div class="columns is-multiline">
         <div class="column is-full">
           <base-card>
-            Ciao
+            {{ coupon.number }}
           </base-card>
         </div>
         <div class="column is-full">
           <base-card>
-            Ciao
+            
           </base-card>
         </div>
       </div>
@@ -22,6 +22,14 @@ import BaseCard from '@/components/BaseCard'
 export default {
   components: {
     BaseCard
+  },
+  props: {
+    coupon: {
+      type: Object,
+      default () {
+        return {}
+      }
+    }
   }
 }
 </script>

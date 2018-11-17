@@ -43,12 +43,21 @@ export default {
   },
   methods: {
     createPassengerItinerary () {
-      this.$store.commit('CREATE_PASSENGER_ITINERARY', {
-        from: this.from,
-        to: this.to,
-        time: this.time,
-        name: "Alex"
-      })
+      let itinerary = {}
+      if (!this.place) {
+        itinerary =  {
+          from: '',
+          to: '',
+          name: "Alex"
+        }
+      } else {
+        itinerary =  {
+          name: "Alex",
+          from: this.from,
+          to: this.to
+        }
+      }
+      this.$store.commit('CREATE_PASSENGER_ITINERARY', itinerary)
     }
   }
 }

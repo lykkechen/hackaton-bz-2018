@@ -59,12 +59,23 @@ export default {
   },
   methods: {
     createDriverItinerary () {
-      this.$store.commit('CREATE_DRIVER_ITINERARY', {
-        places: this.places,
-        from: this.from,
-        to: this.to,
-        time: this.time
-      })
+      let itinerary = {}
+      if (!this.place) {
+        itinerary =  {
+          places: '2',
+          from: 'Schlanders',
+          to: 'Bolzano',
+          time: '15.30'
+        }
+      } else {
+        itinerary =  {
+          places: this.places,
+          from: this.from,
+          to: this.to,
+          time: this.time
+        }
+      }
+      this.$store.commit('CREATE_DRIVER_ITINERARY', itinerary)
     }
   }
 }

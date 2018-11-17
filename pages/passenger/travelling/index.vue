@@ -68,9 +68,6 @@ export default {
       return this.$store.getters['passengers']
     }
   },
-  created () {
-    this.$store.commit('UPDATE_PASSENGERS')
-  },
   methods: {
     chooseDriver (ride) {
       this.$router.push('/passenger/travelling')

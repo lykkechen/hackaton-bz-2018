@@ -37,6 +37,19 @@
             </nuxt-link>
           </div>
         </div>
+        <div
+          v-if="isThereAPassenger"
+          class="columns">
+          <div class="column">
+            <div class="content">
+              You are travelling from {{ passenger.from }} to {{ passenger.to }} now 🚗
+            </div>
+            <nuxt-link to="/passenger/scan">
+              <base-button
+                action="I'm arrived 🎉"/>
+            </nuxt-link>
+          </div>
+        </div>
       </div>
     </section>
   </div>
@@ -46,19 +59,32 @@
 import DriverButton from '@/components/DriverButton'
 import PassengerButton from '@/components/PassengerButton'
 import CouponBadge from '@/components/CouponBadge'
+import BaseButton from '@/components/BaseButton.vue'
 
 
 export default {
   components: {
     DriverButton,
     PassengerButton,
-    CouponBadge
+    CouponBadge,
+    BaseButton
   },
-  data() {
+  data () {
     return {
       numberCoupon: 1
     }
   },
+  computed: {
+    passenger () {
+      return this.$store.getters['passenger']
+    },
+    isThereAPassenger () {
+      if (this.passenger && this.passenger.from) {
+        return true
+      }
+      else return false
+    }
+  }
 }
 </script>
 

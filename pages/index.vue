@@ -11,7 +11,7 @@
         </div>
         <div class="columns is-centered">
           <div class="column is-half has-text-centered">
-            <div class="content">
+            <div class="content is-medium">
               <h3>Hey there, welcome! Are you ready for a new ride?</h3>
             </div>
           </div>

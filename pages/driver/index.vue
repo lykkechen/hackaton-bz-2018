@@ -1,21 +1,33 @@
 <template>
   <section class="section">
     <div class="container">
+      <div class="columns">
+        <div class="column">
+          <figure
+            class="image"
+            style="margin-bottom: 20px;">
+            <img
+              src="/images/car.svg"
+              alt="image"
+              style="width: 150px;">
+          </figure>
+        </div>
+      </div>
       <base-input
         v-model="places"
-        label="Numero di posti"
+        label="How many seats do you have?"
         type="text"/>
       <base-input
         v-model="from"
-        label="Partenza da"
+        label="Leaving from"
         type="text"/>
       <base-input
         v-model="to"
-        label="Arrivo a"
+        label="Arriving to"
         type="text"/>
       <base-input
         v-model="time"
-        label="Partenza alle ore"
+        label="Leaving at"
         type="text"/>
       <br>
       <nuxt-link

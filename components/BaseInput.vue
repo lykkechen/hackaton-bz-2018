@@ -9,6 +9,7 @@
       :value="value"
       :placeholder="placeholder"
       class="input is-shadowless"
+      style="margin-bottom: 10px;"
       type="text"
       @input="onInput">
   </div>

@@ -43,7 +43,7 @@
                   <div class="level">
                     <div class="level-left">
                       <div class="level-item">
-                        <base-button
+                        <driver-button
                           action="Jump in!"
                           @click="approvePassenger"/>
                       </div>
@@ -74,12 +74,14 @@
 
 <script>
 import BaseButton from '@/components/BaseButton.vue'
+import DriverButton from '@/components/DriverButton.vue'
 import BaseCard from '@/components/BaseCard'
 
 export default {
   components: {
     BaseButton,
-    BaseCard
+    BaseCard,
+    DriverButton
   },
   data () {
     return {

@@ -1,20 +1,28 @@
 <template>
   <div class="box is-shadowless">
     <div class="content">
+      <figure
+        class="image"
+        style="margin-bottom: 0;">
+        <img
+          src="/images/TICKET.svg"
+          alt="image"
+          style="width: 100px;">
+      </figure>
       <div class="level is-mobile ">
         <div class="level-left">
           <div class="level-item">
             <div class="circle">{{ numberCoupon }}</div>
           </div>
           <div class="level-item">
-            Free mobility ticket
+            Your travel codes
           </div>
         </div>
         <div
           class="level-item"
           style="font-size: 1rem;">
           <div class="button is-secondary">
-            show
+            show me
           </div>
         </div>
       </div>

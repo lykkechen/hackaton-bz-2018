@@ -29,11 +29,11 @@
             </div>
             <div class="column">
               <profile-icon
-                image="https://cdn.dribbble.com/users/1079878/avatars/normal/fdced349f4efa5f0226dcfab71243d6b.png?1520775907"/>
+                image="https://avatars2.githubusercontent.com/u/26112919"/>
             </div>
             <div class="column">
               <profile-icon
-                image="https://cdn.dribbble.com/users/1079878/avatars/normal/fdced349f4efa5f0226dcfab71243d6b.png?1520775907"/>
+                image="https://avatars3.githubusercontent.com/u/29076107"/>
             </div>
           </div>
           <base-button

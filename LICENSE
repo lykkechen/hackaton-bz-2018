@@ -290,8 +290,12 @@ to attach them to the start of each source file to most effectively
 convey the exclusion of warranty; and each file should have at least
 the "copyright" line and a pointer to where the full notice is found.
 
-    <one line to give the program's name and a brief idea of what it does.>
-    Copyright (C) <year>  <name of author>
+    PoolMe is a log for carpooling travels.
+    With PoolMe you can register and store all your carpooling travels and receive codes that are connected to OpenData.
+    Private or publica entities, profit or non profit, but also individuals, can access those data and create rewards programs based on carpooling travels.
+    PoolMe aims to promote carpooling in South Tirol as a way to enhance environment and daily life thank to open and accessible data.
+
+    Copyright (C) 2018  LocalLost
 
     This program is free software; you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by

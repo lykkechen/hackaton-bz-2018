@@ -77,7 +77,7 @@ export default {
       if (this.passengers.length !== 0) {
         this.$router.push('/driver/travelling')
       } else {
-        this.$router.push('/driver/impact')
+        this.$router.push('/impact')
         this.$store.commit('ADD_DISCOUNT_CODE', {
           number: '757843265876239',
         })

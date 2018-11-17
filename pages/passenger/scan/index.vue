@@ -5,7 +5,7 @@
         <div class="content">
           Hey Alex! Have you arrived? Scan the QR Code and log your travel to add a new code to your log 🎟
         </div>
-        <nuxt-link to="/">
+        <nuxt-link to="/impact">
           <base-button
             action="Scan QR code"
             @click="addDiscountCode"/>

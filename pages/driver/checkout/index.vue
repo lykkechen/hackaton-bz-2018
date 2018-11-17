@@ -28,7 +28,9 @@ export default {
         this.$router.push('/driver/travelling')
       } else {
         this.$router.push('/')
-        this.$store.commit('OBTAIN_COUPON')
+        this.$store.commit('OBTAIN_DISCONT_CODE', {
+          number: '757843265876239',
+        })
       }
       this.isPassangerNotificationVisible = true
     }, 2000)

@@ -5,13 +5,11 @@
       style="padding-top: 0;">
       <div class="container">
         <div
-          v-if="hasCoupons"
+          v-if="hasCodes"
           class="columns is-centered">
           <div
-            v-for="coupon in coupons"
-            :key="coupon.number"
             class="column is-one-third">
-            <coupon-badge :coupon="coupon"/>
+            <coupon-badge :codes="codes"/>
           </div>
         </div>
         <div class="columns is-centered">
@@ -78,11 +76,11 @@ export default {
     passenger () {
       return this.$store.getters['passenger']
     },
-    coupons () {
-      return this.$store.getters['coupons']
+    codes () {
+      return this.$store.getters['codes']
     },
-    hasCoupons () {
-      return this.numberCoupon !== 0
+    hasCodes () {
+      return this.codes.length !== 0
     },
     isThereAPassenger () {
       if (this.passenger && this.passenger.from) {

@@ -7,7 +7,7 @@
       <nuxt-link to="/">
         <base-button
           action="Scan to QR code"
-          @click="addCoupon"/>
+          @click="addDiscountCode"/>
       </nuxt-link>
     </div>
   </section>
@@ -20,8 +20,8 @@ export default {
     BaseButton
   },
   methods: {
-    addCoupon () {
-      this.$store.commit('ADD_COUPON', {
+    addDiscountCode () {
+      this.$store.commit('ADD_DISCOUNT_CODE', {
         number: '757843265876239',
       })
     }

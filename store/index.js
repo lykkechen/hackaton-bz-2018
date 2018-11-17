@@ -10,7 +10,6 @@ const createStore = () => {
         name: 'Mario',
         surname: 'Rossi'
       },
-      coupon: null,
       passenger: {},
       rides: [
         {
@@ -25,9 +24,12 @@ const createStore = () => {
         }
       ],
       passenger: {},
-      coupons: [
+      codes: [
         {
           number: '4754832658346'
+        },
+        {
+          number: '2984758435784'
         }
       ]
     },
@@ -41,8 +43,8 @@ const createStore = () => {
       REJECT_PASSENGER (state, pendingPassenger) {
         state.pendingPassenger = {}
       },
-      OBTAIN_COUPON (state) {
-        state.coupon = 'You obtained your coupon'
+      OBTAIN_DISCONT_CODE (state) {
+        state.codes.push(code)
       },
       CHECKOUT_PASSENGER (state, passenger) {
         var filtered = state.passengers.filter(function(value, index, arr) {
@@ -69,8 +71,11 @@ const createStore = () => {
           }
         ]
       },
-      ADD_COUPON (state, coupon) {
-        state.coupons.push(coupon)
+      ADD_DISCOUNT_CODE (state, code) {
+        state.codes.push(code)
+      },
+      REDEEM_CODE (state) {
+        state.codes.shift()
       }
     },
     actions: {
@@ -85,8 +90,8 @@ const createStore = () => {
       pendingPassenger (state) {
         return state.pendingPassenger
       },
-      coupons (state) {
-        return state.coupons
+      codes (state) {
+        return state.codes
       },
       rides (state) {
         return state.rides

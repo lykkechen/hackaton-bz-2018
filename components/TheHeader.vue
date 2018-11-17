@@ -1,6 +1,8 @@
 <template>
   <nav class="navbar is-transparent">
-    <div class="navbar-brand">
+    <div
+      class="navbar-brand"
+      style="padding: 1rem;">
       <nuxt-link
         to="/">
         <profile-icon

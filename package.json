@@ -1,8 +1,8 @@
 {
   "name": "hackaton-bz-2018",
   "version": "1.0.0",
-  "description": "My exquisite Nuxt.js project",
-  "author": "revas-team",
+  "description": "Demo web app for the PoolMe Application developed during the Vertical Innovation Hackathon 2018",
+  "author": "locallost-team",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",

@@ -15,8 +15,8 @@
               v-for="passenger in passengers"
               :key="passenger.name">
               <base-card>
-                <p>Nome: {{ passenger.name }}</p>
-                <p>Cognome: {{ passenger.surname }}</p>
+                <p>Name: {{ passenger.name }}</p>
+                <p>Surname: {{ passenger.surname }}</p>
               </base-card>
               <br>
             </div>
@@ -32,7 +32,7 @@
                   <hr>
                   <div class="columns">
                     <div class="column">
-                      <h2>Name</h2>
+                      <h2>Name:</h2>
                       <p> {{ pendingPassenger.name }} </p>
                     </div>
                     <div class="column">

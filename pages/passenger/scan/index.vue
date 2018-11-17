@@ -3,7 +3,7 @@
     <div class="container">
       <base-card>
         <div class="content">
-          Hey Alex! Have you arrived? Scan teh QR Code and log your tarvel to add a new code to your log 🎟
+          Hey Alex! Have you arrived? Scan the QR Code and log your travel to add a new code to your log 🎟
         </div>
         <nuxt-link to="/">
           <base-button

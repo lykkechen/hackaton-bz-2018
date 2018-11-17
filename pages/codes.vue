@@ -1,8 +1,9 @@
 <template>
   <section class="section">
     <div class="container">
-      <div class="content">
-        <h1>Your codes</h1>
+      <div class="content is-medium">
+        <h1>Travel log</h1>
+        <p>Here you can find the codes that are connected to OpenData Hub Sudtirol Carpooling</p>
       </div>
       <div class="columns is-multiline">
         <div
@@ -10,11 +11,9 @@
           :key="code.number"
           class="column is-half">
           <base-card>
-            <div class="content">
-              <h1>Code: #{{ code.number }}</h1>
-              <base-button
-                action="Use it"
-                @click="reedemCode"/>
+            <div class="content is-medium">
+              <h3>Travel</h3>
+              <p>{{ code.number }}</p>
             </div>
           </base-card>
         </div>

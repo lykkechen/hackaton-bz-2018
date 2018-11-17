@@ -7,24 +7,24 @@ const createStore = () => {
       driver: {},
       passengers: [
         {
-          name: 'Luigi',
-          surname: 'Verdi'
+          name: 'Ingrid',
+          surname: 'Oberrauch'
         },
       ],
       pendingPassenger: {
-        name: 'Mario',
-        surname: 'Rossi'
+        name: 'Verena',
+        surname: 'Mück'
       },
       passenger: {},
       rides: [
         {
-          name: 'Rose',
-          surname: 'DeWitt',
+          name: 'Jügen',
+          surname: 'Wenter',
           places: '3'
         },
         {
-          name: 'Jack',
-          surname: 'Dawson',
+          name: 'Gennaro',
+          surname: 'Bruno',
           places: '2'
         }
       ],
@@ -59,21 +59,11 @@ const createStore = () => {
       CREATE_PASSENGER_ITINERARY (state, passenger) {
         state.passenger = passenger
       },
+      DELETE_PASSENGER_ITINERARY (state, passenger) {
+        state.passenger = {}
+      },
       APPROVE_DRIVER (state, driver) {
         state.driver = driver
-      },
-      UPDATE_PASSENGERS  (state, passengers) {
-        state.passengers = [
-          {
-            pic: ''
-          },
-          {
-            pic: ''
-          },
-          {
-            pic: ''
-          }
-        ]
       },
       ADD_DISCOUNT_CODE (state, code) {
         state.codes.push(code)

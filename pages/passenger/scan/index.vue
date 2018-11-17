@@ -29,6 +29,10 @@ export default {
       this.$store.commit('ADD_DISCOUNT_CODE', {
         number: '757843265876239',
       })
+      this.deletePassengerItinerary()
+    },
+    deletePassengerItinerary () {
+      this.$store.commit('DELETE_PASSENGER_ITINERARY', {})
     }
   }
 }

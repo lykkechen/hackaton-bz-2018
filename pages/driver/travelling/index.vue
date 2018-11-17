@@ -1,12 +1,13 @@
 <template>
   <section class="section">
     <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-10">
+      <div class="columns is-centered is-multiline">
+        <div
+          v-for="passenger in passengers"
+          :key="passenger.name"
+          class="column is-10">
           <base-card>
-            <div
-              v-for="passenger in passengers"
-              :key="passenger.name">
+            <div>
               <div class="level">
                 <div class="level-left">
                   <div class="level-item">
@@ -72,7 +73,6 @@ export default {
       this.isPassangerNotificationVisible = false
     },
     checkoutPassenger (passenger) {
-      debugger
       this.$store.commit('CHECKOUT_PASSENGER', passenger)
       if (this.passengers.length !== 0) {
         this.$router.push('/driver/travelling')

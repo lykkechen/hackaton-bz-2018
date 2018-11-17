@@ -72,8 +72,13 @@ export default {
       this.isPassangerNotificationVisible = false
     },
     checkoutPassenger (passenger) {
-      this.$router.push('/driver/impact')
+      debugger
       this.$store.commit('CHECKOUT_PASSENGER', passenger)
+      if (this.passengers.length !== 0) {
+        this.$router.push('/driver/travelling')
+      } else {
+        this.$router.push('/driver/impact')
+      }
     }
   }
 }

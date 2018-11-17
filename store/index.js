@@ -5,7 +5,12 @@ const createStore = () => {
   return new Vuex.Store({
     state: {
       driver: {},
-      passengers: [],
+      passengers: [
+        {
+          name: 'Luigi',
+          surname: 'Verdi'
+        },
+      ],
       pendingPassenger: {
         name: 'Mario',
         surname: 'Rossi'
@@ -23,7 +28,6 @@ const createStore = () => {
           places: '2'
         }
       ],
-      passenger: {},
       codes: [
         {
           number: '4754832658346'

@@ -35,7 +35,6 @@ export default {
   },
   data () {
     return {
-      places: "",
       from: "",
       to: "",
       time: ""
@@ -44,7 +43,7 @@ export default {
   methods: {
     createPassengerItinerary () {
       let itinerary = {}
-      if (!this.place) {
+      if (!this.from) {
         itinerary =  {
           from: 'Schlanders',
           to: 'Bozen',
@@ -56,7 +55,7 @@ export default {
           name: "Alex",
           from: this.from,
           to: this.to,
-          time: '15'
+          time: this.time
         }
       }
       this.$store.commit('CREATE_PASSENGER_ITINERARY', itinerary)

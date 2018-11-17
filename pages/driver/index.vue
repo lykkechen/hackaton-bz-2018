@@ -59,8 +59,9 @@ export default {
   },
   methods: {
     createDriverItinerary () {
+      debugger
       let itinerary = {}
-      if (!this.place) {
+      if (!this.places) {
         itinerary =  {
           places: '2',
           from: 'Schlanders',

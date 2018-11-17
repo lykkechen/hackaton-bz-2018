@@ -67,9 +67,6 @@ const createStore = () => {
       },
       ADD_DISCOUNT_CODE (state, code) {
         state.codes.push(code)
-      },
-      REDEEM_CODE (state) {
-        state.codes.shift()
       }
     },
     actions: {

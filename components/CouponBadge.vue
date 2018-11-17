@@ -11,11 +11,13 @@
       </figure>
       <div class="level is-mobile ">
         <div class="level-left">
-          <div class="level-item">
+          <!-- <div class="level-item">
             <div class="circle">{{ codes.length }}</div>
-          </div>
+          </div> -->
           <div class="level-item">
-            Your codes
+            <div class="content is-medium">
+              Travel log and codes
+            </div>
           </div>
         </div>
         <div

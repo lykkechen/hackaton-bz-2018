@@ -31,7 +31,7 @@ export default {
   background-color: #C1FFA4;
   box-shadow: 0 10px 20px rgba(32, 175, 72, 0.20);
   font-size: 1.5rem;
-  color: white;
+  color: #20af48;
   &:hover {
     background-color: darken( #C1FFA4, 10%);
     transition: all 500ms ease;

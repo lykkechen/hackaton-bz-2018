@@ -15,13 +15,28 @@
         <div class="columns is-centered">
           <div class="column is-half has-text-centered">
             <div class="content is-medium">
-              <h3>Hey there, welcome! Are you ready for a new ride?</h3>
+              <h3>Hey there, welcome! <br> This is PoolMe, the travel log for carpooling travels. Are you ready to log a new ride?</h3>
             </div>
           </div>
         </div>
         <div class="columns">
           <div class="column">
             <hr>
+          </div>
+        </div>
+        <div
+          v-if="isThereAPassenger"
+          class="columns is-centered has-text-centered">
+          <div class="column is-half">
+            <base-card>
+              <div class="content is-medium">
+                You are travelling from {{ passenger.from }} to {{ passenger.to }} now 🚗
+              </div>
+              <nuxt-link to="/passenger/scan">
+                <base-button
+                  action="I'm arrived 🎉"/>
+              </nuxt-link>
+            </base-card>
           </div>
         </div>
         <div class="columns is-multiline is-centered">
@@ -40,21 +55,6 @@
             </nuxt-link>
           </div>
         </div>
-        <div
-          v-if="isThereAPassenger"
-          class="columns is-centered">
-          <div class="column is-half">
-            <base-card>
-              <div class="content">
-                You are travelling from {{ passenger.from }} to {{ passenger.to }} now 🚗
-              </div>
-              <nuxt-link to="/passenger/scan">
-                <base-button
-                  action="I'm arrived 🎉"/>
-              </nuxt-link>
-            </base-card>
-          </div>
-        </div>
       </div>
     </section>
   </div>
@@ -65,6 +65,7 @@ import DriverButton from '@/components/DriverButton'
 import PassengerButton from '@/components/PassengerButton'
 import CouponBadge from '@/components/CouponBadge'
 import BaseButton from '@/components/BaseButton.vue'
+import BaseCard from '@/components/BaseCard.vue'
 
 
 export default {
@@ -72,7 +73,8 @@ export default {
     DriverButton,
     PassengerButton,
     CouponBadge,
-    BaseButton
+    BaseButton,
+    BaseCard
   },
   computed: {
     passenger () {

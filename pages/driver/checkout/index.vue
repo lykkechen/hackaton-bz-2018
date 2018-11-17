@@ -1,13 +1,17 @@
 <template>
   <section class="section">
     <div class="container">
-      <div class="content">
-        <h1>Show this QR Code to your passenger</h1>
-      </div>
+      <div class="columns is-centered">
+        <div class="column is-half">
+          <div class="content">
+            <h1>Show this QR Code to your passenger</h1>
+          </div>
 
-      <figure class="image">
-        <img src="/images/qr-code-2.jpg">
-      </figure>
+          <figure class="image is-square">
+            <img src="/images/qr-code-2.jpg">
+          </figure>
+        </div>
+      </div>
     </div>
   </section>
 </template>

@@ -1,23 +1,28 @@
 <template>
   <section class="section">
     <div class="container">
-      <div class="content">
-        Hey Alex! Sei pronto per scendere?
-      </div>
-      <nuxt-link to="/">
-        <base-button
-          action="Scan to QR code"
-          @click="addDiscountCode"/>
-      </nuxt-link>
+      <base-card>
+        <div class="content">
+          Hey Alex! Have you arrived? Scan teh QR Code and log your tarvel to add a new code to your log 🎟
+        </div>
+        <nuxt-link to="/">
+          <base-button
+            action="Scan QR code"
+            @click="addDiscountCode"/>
+        </nuxt-link>
+      </base-card>
     </div>
   </section>
 </template>
 
 <script>
 import BaseButton from '@/components/BaseButton.vue'
+import BaseCard from '@/components/BaseCard.vue'
+
 export default {
   components: {
-    BaseButton
+    BaseButton,
+    BaseCard
   },
   methods: {
     addDiscountCode () {

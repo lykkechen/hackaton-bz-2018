@@ -1,6 +1,6 @@
 <template>
-  <div class="card">
-    <div class="card-content">
+  <section class="section">
+    <div class="container">
       <base-input
         v-model="places"
         label="Numero di posti"
@@ -17,6 +17,7 @@
         v-model="time"
         label="Partenza alle ore"
         type="text"/>
+      <br>
       <nuxt-link
         to="/driver/summary">
         <base-button
@@ -24,7 +25,7 @@
           @click="createDriverItinerary"/>
       </nuxt-link>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>

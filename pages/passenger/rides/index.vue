@@ -4,19 +4,18 @@
       <div
         v-if="hasRides"
         class="content">
-        <h2>Passeggi</h2>
+        <h2>Rides</h2>
         <div
           v-for="ride in rides"
           :key="ride.name">
           <p>Nome: {{ ride.name }}</p>
           <p>Cognome: {{ ride.surname }}</p>
+          <base-button
+            action="Scegli"
+            @click="chooseDriver(ride)"/>
         </div>
       </div>
-      <div>
-        <base-button
-          action="Partenza"
-          @click="$router.push('/driver/travelling')"/>
-      </div>
+      <div/>
     </div>
   </section>
 </template>
@@ -37,16 +36,16 @@ export default {
       return this.$store.getters['rides']
     },
     hasRides () {
-      return this.rides > 0
+      return this.rides !== 0
     }
   },
   methods: {
-    approvePassenger () {
-      this.$store.commit('APPROVE_PASSENGER', this.pendingPassenger)
-      this.isPassangerNotificationVisible = false
+    chooseDriver (ride) {
+      this.$router.push('/passenger/travelling')
+      this.$store.commit('APPROVE_DRIVER', ride)
     },
     rejectPassanger () {
-      this.$store.commit('REJECT_PASSENGER')
+
       this.isPassangerNotificationVisible = false
     }
   }

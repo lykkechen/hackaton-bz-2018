@@ -17,7 +17,7 @@
         to="/passenger/rides">
         <base-button
           action="Let's go"
-          @click="createDriverItinerary"/>
+          @click="createPassengerItinerary"/>
       </nuxt-link>
     </div>
   </div>
@@ -41,9 +41,8 @@ export default {
     }
   },
   methods: {
-    createDriverItinerary () {
-      this.$store.commit('CREATE_DRIVER_ITINERARY', {
-        places: this.places,
+    createPassengerItinerary () {
+      this.$store.commit('CREATE_PASSENGER_ITINERARY', {
         from: this.from,
         to: this.to,
         time: this.time

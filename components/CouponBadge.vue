@@ -21,9 +21,11 @@
         <div
           class="level-item"
           style="font-size: 1rem;">
-          <div class="button is-secondary">
-            show me
-          </div>
+          <nuxt-link to="coupons">
+            <div class="button is-secondary">
+              show me
+            </div>
+          </nuxt-link>
         </div>
       </div>
     </div>

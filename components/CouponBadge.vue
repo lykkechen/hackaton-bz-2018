@@ -12,7 +12,7 @@
       <div class="level is-mobile ">
         <div class="level-left">
           <div class="level-item">
-            <div class="circle">{{ numberCoupon }}</div>
+            <div class="circle">{{ codes.length }}</div>
           </div>
           <div class="level-item">
             Your codes
@@ -21,7 +21,7 @@
         <div
           class="level-item"
           style="font-size: 1rem;">
-          <nuxt-link to="coupons">
+          <nuxt-link to="codes">
             <div class="button is-secondary">
               show me
             </div>
@@ -34,9 +34,12 @@
 
 <script>
 export default {
-  data() {
-    return {
-      numberCoupon: 1
+  props: {
+    codes: {
+    type: Array,
+    default () {
+      return []
+      }
     }
   }
 }

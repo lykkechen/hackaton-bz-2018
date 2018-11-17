@@ -4,9 +4,12 @@
       class="section"
       style="padding-top: 0;">
       <div class="container">
-        <div class="columns is-centered">
-          <div class="column is-one-third">
-            <coupon-badge/>
+        <div
+          v-if="hasCodes"
+          class="columns is-centered">
+          <div
+            class="column is-one-third">
+            <coupon-badge :codes="codes"/>
           </div>
         </div>
         <div class="columns is-centered">
@@ -69,14 +72,15 @@ export default {
     CouponBadge,
     BaseButton
   },
-  data () {
-    return {
-      numberCoupon: 1
-    }
-  },
   computed: {
     passenger () {
       return this.$store.getters['passenger']
+    },
+    codes () {
+      return this.$store.getters['codes']
+    },
+    hasCodes () {
+      return this.codes.length !== 0
     },
     isThereAPassenger () {
       if (this.passenger && this.passenger.from) {

@@ -11,9 +11,10 @@
           class="column is-half">
           <base-card>
             <div class="content">
-              <h1>Code: #{{ code }}</h1>
+              <h1>Code: #{{ code.number }}</h1>
               <base-button
-                action="Use it"/>
+                action="Use it"
+                @click="reedemCode"/>
             </div>
           </base-card>
         </div>
@@ -27,16 +28,17 @@ import BaseCard from '@/components/BaseCard'
 import BaseButton from '@/components/BaseButton'
 export default {
   components: {
-    BaseCard,
-    BaseButton
+    BaseButton,
+    BaseCard
   },
-  data() {
-    return {
-      codes: [
-        '124545454',
-        '432432432',
-        "143243243"
-      ]
+  computed: {
+    codes () {
+      return this.$store.getters['codes']
+    }
+  },
+  methods: {
+    reedemCode () {
+      this.$store.commit('REDEEM_CODE')
     }
   }
 }

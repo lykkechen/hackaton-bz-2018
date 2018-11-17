@@ -6,9 +6,10 @@
           <h1>You've successfully booked your ride!</h1>
         </div>
         <div class="content has-text-centered">
-          <base-button
-            action="Go back to home"
-            to="/"/>
+          <nuxt-link to="/">
+            <base-button
+              action="Go back to home"/>
+          </nuxt-link>
         </div>
       </base-card>
     </div>

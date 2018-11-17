@@ -46,7 +46,8 @@ export default {
       this.$store.commit('CREATE_PASSENGER_ITINERARY', {
         from: this.from,
         to: this.to,
-        time: this.time
+        time: this.time,
+        name: "Alex"
       })
     }
   }

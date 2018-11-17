@@ -15,7 +15,7 @@
             <div class="circle">{{ codes.length }}</div>
           </div>
           <div class="level-item">
-            Your travel codes
+            Your codes
           </div>
         </div>
         <div

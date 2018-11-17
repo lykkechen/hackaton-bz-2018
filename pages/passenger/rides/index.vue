@@ -9,7 +9,7 @@
           v-for="ride in rides"
           :key="ride.name">
           <base-card>
-            <h3>Autista</h3>
+            <h3>Driver</h3>
             <p>{{ ride.name }}</p>
             <p>{{ ride.surname }}</p>
             <base-button

@@ -39,7 +39,9 @@
             </base-card>
           </div>
         </div>
-        <div class="columns is-multiline is-centered">
+        <div
+          v-if="!isThereAPassenger"
+          class="columns is-multiline is-centered">
           <div class="column is-half has-text-right-desktop has-text-centered-mobile">
             <nuxt-link
               to="/driver">

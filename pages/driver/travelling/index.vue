@@ -6,7 +6,7 @@
       Passeggero: {{ passenger.name }} {{ passenger.surname }}
       <base-button
         action="È arrivato"
-        @click="goToQRCode"/>
+        @click="checkoutPassenger(passenger)"/>
     </div>
   </div>
 </template>
@@ -47,6 +47,10 @@ export default {
     rejectPassanger () {
       this.$store.commit('REJECT_PASSENGER')
       this.isPassangerNotificationVisible = false
+    },
+    checkoutPassenger (passenger) {
+      this.$router.push('/driver/checkout')
+      this.$store.commit('CHECKOUT_PASSENGER', passenger)
     }
   }
 }

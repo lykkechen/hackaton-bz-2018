@@ -33,11 +33,6 @@ export default {
     BaseButton,
     BaseCard
   },
-  data () {
-    return {
-
-    }
-  },
   computed: {
     rides () {
       return this.$store.getters['rides']
@@ -52,7 +47,6 @@ export default {
       this.$store.commit('APPROVE_DRIVER', ride)
     },
     rejectPassanger () {
-
       this.isPassangerNotificationVisible = false
     }
   }

@@ -59,6 +59,9 @@ const createStore = () => {
       CREATE_PASSENGER_ITINERARY (state, passenger) {
         state.passenger = passenger
       },
+      DELETE_PASSENGER_ITINERARY (state, passenger) {
+        state.passenger = {}
+      },
       APPROVE_DRIVER (state, driver) {
         state.driver = driver
       },

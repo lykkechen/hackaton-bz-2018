@@ -5,6 +5,8 @@
         <div class="column">
           <base-card>
             <div class="content">
+              <h1>This is your travel code: </h1>
+              <h4>1110202</h4>
               <h3>People met</h3>
               <p>20</p>
               <br>

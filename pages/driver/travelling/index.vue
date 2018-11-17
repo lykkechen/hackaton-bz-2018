@@ -49,7 +49,7 @@ export default {
       this.isPassangerNotificationVisible = false
     },
     checkoutPassenger (passenger) {
-      this.$router.push('/driver/checkout')
+      this.$router.push('/driver/impact')
       this.$store.commit('CHECKOUT_PASSENGER', passenger)
     }
   }

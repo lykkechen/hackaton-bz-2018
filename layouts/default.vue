@@ -24,12 +24,7 @@ export default {
     isRoot() {
       return this.$route.path !== '/'
     }
-  },
-  watch: {
-    isRoot(newVal, oldVal) {
-      debugger
-    }
-  },
+  }
 }
 </script>
 
